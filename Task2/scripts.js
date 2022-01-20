@@ -21,7 +21,8 @@ const getAPI = () => {
             data.cards.forEach(property => {
                 console.log(property);
                 let cardImage = document.createElement('img');
-                cardImage.src = property.image;
+                cardImage.setAttribute("src", property.image);
+                //cardImage.src = property.image;
                 cardDisplayArea.appendChild(cardImage);
 /*
 {
