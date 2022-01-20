@@ -21,6 +21,7 @@ deckId = "";
 playerScore = 0;
 dealerScore = 0;
 score = "";
+hasAce = false;
 
 setCardImage = (img, imgElement, txtElement, txtValue) => {
     let cardImage = document.createElement('img');
@@ -61,7 +62,7 @@ resetAll = () => {
     playerScore = 0;
     dealerScore = 0;
     score = "";
-    
+    hasAce = false;
 }
 
 startblackjack = () => {
@@ -134,6 +135,7 @@ addToPlayerScore = (cardValue) => {
     
 }
 
+//push it in single function. duplication...
 addToDealerScore = (cardValue) => {
 
     let value = 0 ;
@@ -212,6 +214,8 @@ hitMe = () => {
     }
 }
 
+
+//once it works, refine the logic. make it simpler..
 setOutcome = () => {
     score = "Player score: " + playerScore + ", Dealer Score: " + dealerScore; 
     console.log (flow);
